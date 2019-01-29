@@ -32,6 +32,9 @@
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-5"/>
+                                <connections>
+                                    <action selector="PlayerTwo_MinusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GX0-uc-er2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYZ-vq-p4m">
                                 <rect key="frame" x="125" y="20" width="62.5" height="151"/>
@@ -47,6 +50,9 @@
                                 <color key="backgroundColor" red="0.55232650159999996" green="1" blue="0.92491975900000001" alpha="0.42718419889999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="PlayerTwo_PlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrs-U8-k3p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8f-cr-onj">
                                 <rect key="frame" x="250" y="20" width="62.5" height="151"/>
@@ -62,6 +68,9 @@
                                 <color key="backgroundColor" red="0.81176470590000005" green="1" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+5"/>
+                                <connections>
+                                    <action selector="PlayerTwo_PlusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0j-Qt-D8f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-ar-akK" userLabel="Play">
                                 <rect key="frame" x="62.5" y="20" width="62.5" height="151"/>
@@ -77,6 +86,9 @@
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="PlayerTwo_MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFR-tq-tpL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-0q-6FC">
                                 <rect key="frame" x="0.0" y="20" width="62.5" height="151"/>
@@ -107,24 +119,36 @@
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-5"/>
+                                <connections>
+                                    <action selector="PlayerThree_MinusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzh-Ze-Npq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBA-9Q-DoM">
                                 <rect key="frame" x="125" y="323.5" width="62.5" height="151"/>
                                 <color key="backgroundColor" red="0.55232650159999996" green="1" blue="0.92491975900000001" alpha="0.42718419889999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="PlayerThree_PlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGt-Gf-oJD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w6-uZ-MyT">
                                 <rect key="frame" x="250" y="323.5" width="62.5" height="151"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="1" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+5"/>
+                                <connections>
+                                    <action selector="PlayerThree_PlusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rah-MK-a2o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-Ua-vya">
                                 <rect key="frame" x="62.5" y="323.5" width="62.5" height="151"/>
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="PlayerThree_MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcR-Wl-xM7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ciA-fP-HNe">
                                 <rect key="frame" x="0.0" y="323.5" width="62.5" height="151"/>
@@ -138,7 +162,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-Ir-3sc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-Ir-3sc">
                                 <rect key="frame" x="0.0" y="636" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sST-rv-vXj"/>
@@ -152,24 +176,36 @@
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-5"/>
+                                <connections>
+                                    <action selector="PlayerFour_MinusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y38-lf-sXC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="744-Gr-JUq">
                                 <rect key="frame" x="125" y="381" width="63" height="80"/>
                                 <color key="backgroundColor" red="0.55232650159999996" green="1" blue="0.92491975900000001" alpha="0.42718419889999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="PlayerFour_PlusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8C-tP-kQH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ker-t0-hdt">
                                 <rect key="frame" x="250" y="382" width="63" height="82"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="1" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+5"/>
+                                <connections>
+                                    <action selector="PlayerFour_PlusFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oht-te-bs0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrG-5V-aW1">
                                 <rect key="frame" x="63" y="381" width="62" height="80"/>
                                 <color key="backgroundColor" red="0.86197918650000005" green="0.86197918650000005" blue="0.86197918650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="PlayerFour_MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgr-xC-rTO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="P4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="AjP-tb-lDd">
                                 <rect key="frame" x="0.0" y="381" width="63" height="80"/>
@@ -325,7 +361,10 @@
                     </view>
                     <connections>
                         <outlet property="OutcomeLabel" destination="MfV-Ir-3sc" id="anR-wF-ab2"/>
+                        <outlet property="PlayerFourScore" destination="k3x-vV-ZgV" id="tlO-2x-dL3"/>
                         <outlet property="PlayerOneScore" destination="Elr-tn-mek" id="xey-RR-Dm6"/>
+                        <outlet property="PlayerThreeScore" destination="WZd-tM-Txv" id="ecK-ia-ujV"/>
+                        <outlet property="PlayerTwoScore" destination="FFg-it-Gxg" id="gzu-wN-YFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
