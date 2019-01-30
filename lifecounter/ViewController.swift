@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var PlayerStackViews: [UIStackView]!
+    
     @IBOutlet var PlayerScore: [UILabel]!
     
     @IBOutlet var PlayerOneButtons: [UIButton]!
@@ -32,9 +34,18 @@ class ViewController: UIViewController {
     
     var losers: [String] = []
     
+    var player_count = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func AddPlayerButtonPress(_ sender: Any) {
+        if player_count < 8 {
+            PlayerStackViews[player_count].isHidden = false
+            player_count += 1
+        }
     }
     
     @IBAction func ChangeValueButtonPressed(_ sender: UIButton) {
