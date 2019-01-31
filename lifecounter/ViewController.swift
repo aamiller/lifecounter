@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var Add_Remove_Player_Buttons: [UIButton]!
     
+    @IBOutlet weak var EndOfGameStackView: UIStackView!
+    
     // Button press values for all players
     var increment_vals : [[Int]] = [[-1, 1, -5, 5], [-1, 1, -5, 5],
                                     [-1, 1, -5, 5], [-1, 1, -5, 5],
@@ -57,9 +59,13 @@ class ViewController: UIViewController {
             increment_vals = senderVC.gameButtonValues
         }
         
+       updateButtonLabels()
+    }
+    
+    func updateButtonLabels() {
         // Update text values in displayed buttons
-        PlayerOneButtons[2].setTitle(String(increment_vals[0][2]), for: .normal)
-        PlayerOneButtons[3].setTitle(String(increment_vals[0][3]), for: .normal)
+        PlayerOneButtons[2].setTitle(String(increment_vals[0][3]), for: .normal)
+        PlayerOneButtons[3].setTitle(String(increment_vals[0][2]), for: .normal)
         
         PlayerTwoButtons[2].setTitle(String(increment_vals[1][2]), for: .normal)
         PlayerTwoButtons[3].setTitle(String(increment_vals[1][3]), for: .normal)
@@ -146,11 +152,34 @@ class ViewController: UIViewController {
             if !losers.contains(player) {
                 losers.append(player)
                 gameHistory = gameHistory + "Player " + player + " lost. \n\n"
+                if player_count - losers.count == 1 {
+                    EndOfGameStackView.isHidden = false
+                }
             }
         }
         return String(newScore)
     }
     
+    @IBAction func ResetGameButtonPressed(_ sender: Any) {
+        increment_vals = [[-1, 1, -5, 5], [-1, 1, -5, 5],
+                          [-1, 1, -5, 5], [-1, 1, -5, 5],
+                          [-1, 1, -5, 5], [-1, 1, -5, 5],
+                          [-1, 1, -5, 5], [-1, 1, -5, 5],
+                          [-1, 1, -5, 5], [-1, 1, -5, 5]]
+        updateButtonLabels()
+        EndOfGameStackView.isHidden = true
+        gameHistory = ""
+        player_count = 4
+        for i in 4...7 {
+            PlayerStackViews[i].isHidden = true
+        }
+        for i in 0...7 {
+            PlayerScore[i].text = "20"
+        }
+        Add_Remove_Player_Buttons[0].isEnabled = true
+        Add_Remove_Player_Buttons[1].isEnabled = true
+        gameStarted = false
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // verify that this is the right segue or going to the right view controller destination
         switch segue.identifier {

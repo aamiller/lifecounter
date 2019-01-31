@@ -608,10 +608,34 @@
                                     <constraint firstAttribute="height" constant="40" id="EwE-65-qxE"/>
                                 </constraints>
                             </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="149" translatesAutoresizingMaskIntoConstraints="NO" id="LSL-FN-oa5" userLabel="Reset and End of Game text">
+                                <rect key="frame" x="0.0" y="627" width="375" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-Ab-30k">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-i4-vnX">
+                                        <rect key="frame" x="314" y="0.0" width="61" height="35"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="ResetGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4y-5H-9vL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSL-FN-oa5" secondAttribute="trailing" id="1VO-yW-5qY"/>
                             <constraint firstItem="8yH-6Q-fMR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3CE-Vv-gJF"/>
+                            <constraint firstItem="LSL-FN-oa5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="98p-TF-wXs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LSL-FN-oa5" secondAttribute="bottom" constant="5" id="Bpg-VW-HmL"/>
                             <constraint firstItem="8yH-6Q-fMR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ds5-kh-dhy"/>
                             <constraint firstItem="8yH-6Q-fMR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ppu-IR-HrZ"/>
                             <constraint firstItem="8yH-6Q-fMR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XHL-ks-obP"/>
@@ -623,6 +647,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="EndOfGameStackView" destination="LSL-FN-oa5" id="dif-ha-mXe"/>
                         <outletCollection property="PlayerScore" destination="Elr-tn-mek" collectionClass="NSMutableArray" id="F8b-o1-AWY"/>
                         <outletCollection property="PlayerScore" destination="Xgm-Wb-t4f" collectionClass="NSMutableArray" id="0Im-yp-fWd"/>
                         <outletCollection property="PlayerScore" destination="8H9-ma-yKE" collectionClass="NSMutableArray" id="Mok-kh-Hge"/>
