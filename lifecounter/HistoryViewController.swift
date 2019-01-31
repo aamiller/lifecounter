@@ -10,6 +10,7 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     var gameHistoryText : String = ""
+    var activePlayerCount : Int = 4
     @IBOutlet weak var GameHistory: UITextView!
     
     override func viewDidLoad() {

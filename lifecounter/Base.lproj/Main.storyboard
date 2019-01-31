@@ -753,7 +753,7 @@
                                     <segue destination="OcS-0s-jIU" kind="unwind" unwindAction="unwindToThisVC:" id="JQ4-kM-4Ib"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Lln-u3-tNF">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Lln-u3-tNF" userLabel="P1">
                                 <rect key="frame" x="4" y="64" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-qc-18X">
@@ -791,7 +791,7 @@
                                     <constraint firstAttribute="height" constant="40" id="3eq-BX-B7R"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-Yz-hoX">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-Yz-hoX" userLabel="P2">
                                 <rect key="frame" x="4" y="104" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-hS-0pO">
@@ -829,7 +829,7 @@
                                     <constraint firstAttribute="height" constant="40" id="drx-mj-mgS"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="k41-TW-5M0">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="k41-TW-5M0" userLabel="P3">
                                 <rect key="frame" x="4" y="144" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuZ-3v-nRF">
@@ -867,7 +867,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Ttg-UZ-6db"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="kYr-aw-oxo">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="kYr-aw-oxo" userLabel="P4">
                                 <rect key="frame" x="4" y="184" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-hn-P9i">
@@ -905,7 +905,7 @@
                                     <constraint firstAttribute="height" constant="40" id="8a2-7g-JgL"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Vvu-4n-vFD">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Vvu-4n-vFD" userLabel="P5">
                                 <rect key="frame" x="4" y="224" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-od-yLU">
@@ -943,7 +943,7 @@
                                     <constraint firstAttribute="height" constant="40" id="RmW-G6-pJf"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="ww1-gl-Yn3">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="ww1-gl-Yn3" userLabel="P6">
                                 <rect key="frame" x="4" y="264" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bg-I8-32f">
@@ -981,7 +981,7 @@
                                     <constraint firstAttribute="height" constant="40" id="vXb-UQ-ae0"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="qiI-ou-fvR">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="qiI-ou-fvR" userLabel="P7">
                                 <rect key="frame" x="4" y="304" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFF-Hl-fK2">
@@ -1025,7 +1025,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-Z4-rsx">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-Z4-rsx" userLabel="P8">
                                 <rect key="frame" x="4" y="344" width="371" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfg-md-9Ty">
@@ -1129,6 +1129,15 @@
                         <outletCollection property="PlayerButtonValues" destination="UEV-dd-vCq" collectionClass="NSMutableArray" id="dcI-cJ-CL8"/>
                         <outletCollection property="PlayerButtonValues" destination="A6k-Qm-LZI" collectionClass="NSMutableArray" id="a9j-xv-ZyV"/>
                         <outletCollection property="PlayerButtonValues" destination="Lup-cv-KKZ" collectionClass="NSMutableArray" id="dza-Rb-6HV"/>
+                        <outletCollection property="StackViews" destination="Lln-u3-tNF" collectionClass="NSMutableArray" id="PlY-0h-ZDf"/>
+                        <outletCollection property="StackViews" destination="Q7g-Yz-hoX" collectionClass="NSMutableArray" id="jnr-Nh-ozp"/>
+                        <outletCollection property="StackViews" destination="k41-TW-5M0" collectionClass="NSMutableArray" id="e4d-YL-F0g"/>
+                        <outletCollection property="StackViews" destination="k41-TW-5M0" collectionClass="NSMutableArray" id="cmk-el-rBN"/>
+                        <outletCollection property="StackViews" destination="kYr-aw-oxo" collectionClass="NSMutableArray" id="XYh-kW-Edu"/>
+                        <outletCollection property="StackViews" destination="Vvu-4n-vFD" collectionClass="NSMutableArray" id="MbV-Si-dag"/>
+                        <outletCollection property="StackViews" destination="ww1-gl-Yn3" collectionClass="NSMutableArray" id="ISh-Gk-fpb"/>
+                        <outletCollection property="StackViews" destination="qiI-ou-fvR" collectionClass="NSMutableArray" id="y5H-zP-q2a"/>
+                        <outletCollection property="StackViews" destination="MCT-Z4-rsx" collectionClass="NSMutableArray" id="PB6-M0-Biw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jaR-eP-9Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,11 +18,23 @@ class UpdateButtonsViewController: UIViewController {
     
     @IBOutlet var PlayerButtonValues: [UILabel]!
     
+    @IBOutlet var StackViews: [UIStackView]!
+    
+    var activePlayerCount : Int = 4
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set values
         for (index, button) in PlayerButtonValues.enumerated() {
             button.text = String(gameButtonValues[index][3])
+        }
+        
+        for (index, view) in StackViews.enumerated() {
+            if index <= activePlayerCount {
+                view.isHidden = false
+            } else {
+                view.isHidden = true
+            }
         }
     }
     

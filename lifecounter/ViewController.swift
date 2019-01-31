@@ -160,6 +160,7 @@ class ViewController: UIViewController {
         case "UpdateButtonSegue":
             let buttonUpdate = segue.destination as! UpdateButtonsViewController
             buttonUpdate.gameButtonValues = increment_vals
+            buttonUpdate.activePlayerCount = player_count
         default: break
         }
     }
