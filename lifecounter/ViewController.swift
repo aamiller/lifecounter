@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var PlayerScore: [UILabel]!
     
     @IBOutlet var PlayerOneButtons: [UIButton]!
-   
+    
     @IBOutlet var PlayerTwoButtons: [UIButton]!
     
     @IBOutlet var PlayerThreeButtons: [UIButton]!
@@ -33,15 +33,15 @@ class ViewController: UIViewController {
     @IBOutlet var Add_Remove_Player_Buttons: [UIButton]!
     
     // Button press values for all players
-    var increment_vals = [[-1, 1, -5, 5], [-1, 1, -5, 5],
-                          [-1, 1, -5, 5], [-1, 1, -5, 5],
-                          [-1, 1, -5, 5], [-1, 1, -5, 5],
-                          [-1, 1, -5, 5], [-1, 1, -5, 5],
-                          [-1, 1, -5, 5], [-1, 1, -5, 5]]
+    var increment_vals : [[Int]] = [[-1, 1, -5, 5], [-1, 1, -5, 5],
+                                    [-1, 1, -5, 5], [-1, 1, -5, 5],
+                                    [-1, 1, -5, 5], [-1, 1, -5, 5],
+                                    [-1, 1, -5, 5], [-1, 1, -5, 5],
+                                    [-1, 1, -5, 5], [-1, 1, -5, 5]]
     
     var losers: [String] = []
     
-    var gameHistory: String = "Game begins. "
+    var gameHistory: String = "Game begins. \n"
     
     var player_count = 4
     
@@ -50,6 +50,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func unwindToThisVC(_ sender: UIStoryboardSegue) {
+        if let senderVC = sender.source as? UpdateButtonsViewController {
+            increment_vals = senderVC.gameButtonValues
+        }
+        
+        // Update text values in displayed buttons
+        PlayerOneButtons[2].setTitle(String(increment_vals[0][2]), for: .normal)
+        PlayerOneButtons[3].setTitle(String(increment_vals[0][3]), for: .normal)
+        
+        PlayerTwoButtons[2].setTitle(String(increment_vals[1][2]), for: .normal)
+        PlayerTwoButtons[3].setTitle(String(increment_vals[1][3]), for: .normal)
+        
+        PlayerThreeButtons[2].setTitle(String(increment_vals[2][2]), for: .normal)
+        PlayerThreeButtons[3].setTitle(String(increment_vals[2][3]), for: .normal)
+        
+        PlayerFourButtons[2].setTitle(String(increment_vals[3][2]), for: .normal)
+        PlayerFourButtons[3].setTitle(String(increment_vals[3][3]), for: .normal)
+        
+        PlayerFiveButtons[2].setTitle(String(increment_vals[4][2]), for: .normal)
+        PlayerFiveButtons[3].setTitle(String(increment_vals[4][3]), for: .normal)
+        
+        PlayerSixButtons[2].setTitle(String(increment_vals[5][2]), for: .normal)
+        PlayerSixButtons[3].setTitle(String(increment_vals[5][3]), for: .normal)
+        
+        PlayerSevenButtons[2].setTitle(String(increment_vals[6][2]), for: .normal)
+        PlayerSevenButtons[3].setTitle(String(increment_vals[6][3]), for: .normal)
+        
+        PlayerEightButtons[2].setTitle(String(increment_vals[7][2]), for: .normal)
+        PlayerEightButtons[3].setTitle(String(increment_vals[7][3]), for: .normal)
     }
     
     @IBAction func UpdatePlayersButtonPress(_ sender: UIButton) {
@@ -69,7 +100,7 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func ChangeValueButtonPressed(_ sender: UIButton) {
         gameStarted = true
         Add_Remove_Player_Buttons[0].isEnabled = false
@@ -94,30 +125,43 @@ class ViewController: UIViewController {
         }
     }
     
-
+    
     func newScore(_ oldScore: String?, _ scoreChangeTag: Int, _ player: String) -> String {
         let currScore : String = oldScore ?? "0"
         let newScore = Int(currScore)! + increment_vals[Int(player)! - 1][scoreChangeTag - 1]
         let playerDetails : String = "Player " + player
         switch scoreChangeTag {
-            case 1: gameHistory = gameHistory + playerDetails + " lost 1 life."
-            case 2: gameHistory = gameHistory + "Player " + player + " gained 1 life."
-            case 3:
-                let scoreChange : Int = abs(increment_vals[Int(player)! - 1][scoreChangeTag - 1])
-                gameHistory = gameHistory + String(playerDetails) + " lost "  + String(scoreChange) + " life."
-            case 4:
-                let scoreChange : Int = increment_vals[Int(player)! - 1][scoreChangeTag - 1]
-                gameHistory = gameHistory + String(playerDetails) + " gained " + String(scoreChange) + " life."
+        case 1: gameHistory = gameHistory + playerDetails + " lost 1 life.\n"
+        case 2: gameHistory = gameHistory + "Player " + player + " gained 1 life.\n"
+        case 3:
+            let scoreChange : Int = abs(increment_vals[Int(player)! - 1][scoreChangeTag - 1])
+            gameHistory = gameHistory + String(playerDetails) + " lost "  + String(scoreChange) + " life. \n"
+        case 4:
+            let scoreChange : Int = increment_vals[Int(player)! - 1][scoreChangeTag - 1]
+            gameHistory = gameHistory + String(playerDetails) + " gained " + String(scoreChange) + " life. \n"
         default: break
         }
-
+        
         if newScore <= 0 {
             if !losers.contains(player) {
                 losers.append(player)
-                gameHistory = gameHistory + "Player " + player + " lost. "
+                gameHistory = gameHistory + "Player " + player + " lost. \n\n"
             }
         }
         return String(newScore)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // verify that this is the right segue or going to the right view controller destination
+        switch segue.identifier {
+        case "GameToHistorySegue":
+            let historyVC = segue.destination as! HistoryViewController
+            historyVC.gameHistoryText = gameHistory
+        case "UpdateButtonSegue":
+            let buttonUpdate = segue.destination as! UpdateButtonsViewController
+            buttonUpdate.gameButtonValues = increment_vals
+        default: break
+        }
     }
 }
 
